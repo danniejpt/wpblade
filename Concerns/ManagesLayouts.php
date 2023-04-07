@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace BC\WP\View\Concerns;
 
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Str;
+use BC\WP\Contracts\View\View;
+use BC\WP\Support\Str;
 use InvalidArgumentException;
 
 trait ManagesLayouts

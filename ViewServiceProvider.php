@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\View\Compilers\BladeCompiler;
-use Illuminate\View\Engines\CompilerEngine;
-use Illuminate\View\Engines\EngineResolver;
-use Illuminate\View\Engines\FileEngine;
-use Illuminate\View\Engines\PhpEngine;
+use BC\WP\Support\ServiceProvider;
+use BC\WP\View\Compilers\BladeCompiler;
+use BC\WP\View\Engines\CompilerEngine;
+use BC\WP\View\Engines\EngineResolver;
+use BC\WP\View\Engines\FileEngine;
+use BC\WP\View\Engines\PhpEngine;
 
 class ViewServiceProvider extends ServiceProvider
 {
@@ -63,10 +63,10 @@ class ViewServiceProvider extends ServiceProvider
     /**
      * Create a new Factory Instance.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $resolver
-     * @param  \Illuminate\View\ViewFinderInterface  $finder
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
-     * @return \Illuminate\View\Factory
+     * @param  \BC\WP\View\Engines\EngineResolver  $resolver
+     * @param  \BC\WP\View\ViewFinderInterface  $finder
+     * @param  \BC\WP\Contracts\Events\Dispatcher  $events
+     * @return \BC\WP\View\Factory
      */
     protected function createFactory($resolver, $finder, $events)
     {
@@ -129,7 +129,7 @@ class ViewServiceProvider extends ServiceProvider
     /**
      * Register the file engine implementation.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $resolver
+     * @param  \BC\WP\View\Engines\EngineResolver  $resolver
      * @return void
      */
     public function registerFileEngine($resolver)
@@ -142,7 +142,7 @@ class ViewServiceProvider extends ServiceProvider
     /**
      * Register the PHP engine implementation.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $resolver
+     * @param  \BC\WP\View\Engines\EngineResolver  $resolver
      * @return void
      */
     public function registerPhpEngine($resolver)
@@ -155,7 +155,7 @@ class ViewServiceProvider extends ServiceProvider
     /**
      * Register the Blade engine implementation.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $resolver
+     * @param  \BC\WP\View\Engines\EngineResolver  $resolver
      * @return void
      */
     public function registerBladeEngine($resolver)

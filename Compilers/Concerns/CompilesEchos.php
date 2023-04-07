@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace BC\WP\View\Compilers\Concerns;
 
 use Closure;
-use Illuminate\Support\Str;
+use BC\WP\Support\Str;
 
 trait CompilesEchos
 {

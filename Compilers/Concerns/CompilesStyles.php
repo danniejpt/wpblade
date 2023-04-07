@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace BC\WP\View\Compilers\Concerns;
 
 trait CompilesStyles
 {
@@ -14,6 +14,6 @@ trait CompilesStyles
     {
         $expression = is_null($expression) ? '([])' : $expression;
 
-        return "style=\"<?php echo \Illuminate\Support\Arr::toCssStyles{$expression} ?>\"";
+        return "style=\"<?php echo \BC\WP\Support\Arr::toCssStyles{$expression} ?>\"";
     }
 }

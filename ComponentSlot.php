@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
-use Illuminate\Contracts\Support\Htmlable;
+use BC\WP\View\Contracts\Support\Htmlable;
 
 class ComponentSlot implements Htmlable
 {
     /**
      * The slot attribute bag.
      *
-     * @var \Illuminate\View\ComponentAttributeBag
+     * @var \BC\WP\View\ComponentAttributeBag
      */
     public $attributes;
 

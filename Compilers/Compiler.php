@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\View\Compilers;
+namespace BC\WP\View\Compilers;
 
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Str;
+use BC\WP\Filesystem\Filesystem;
+use BC\WP\View\Support\Str;
 use InvalidArgumentException;
 
 abstract class Compiler
@@ -11,7 +11,7 @@ abstract class Compiler
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \BC\WP\Filesystem\Filesystem
      */
     protected $files;
 
@@ -46,7 +46,7 @@ abstract class Compiler
     /**
      * Create a new compiler instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \BC\WP\Filesystem\Filesystem  $files
      * @param  string  $cachePath
      * @param  string  $basePath
      * @param  bool  $shouldCache

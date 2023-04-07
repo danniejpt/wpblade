@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace BC\WP\View\Concerns;
 
 use Closure;
-use Illuminate\Contracts\View\View as ViewContract;
-use Illuminate\Support\Str;
+use BC\WP\Contracts\View\View as ViewContract;
+use BC\WP\Support\Str;
 
 trait ManagesEvents
 {
@@ -169,7 +169,7 @@ trait ManagesEvents
     /**
      * Call the composer for a given view.
      *
-     * @param  \Illuminate\Contracts\View\View  $view
+     * @param  \BC\WP\Contracts\View\View  $view
      * @return void
      */
     public function callComposer(ViewContract $view)
@@ -180,7 +180,7 @@ trait ManagesEvents
     /**
      * Call the creator for a given view.
      *
-     * @param  \Illuminate\Contracts\View\View  $view
+     * @param  \BC\WP\Contracts\View\View  $view
      * @return void
      */
     public function callCreator(ViewContract $view)

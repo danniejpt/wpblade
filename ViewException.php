@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
 use ErrorException;
-use Illuminate\Container\Container;
-use Illuminate\Support\Reflector;
+use BC\WP\Container\Container;
+use BC\WP\Support\Reflector;
 
 class ViewException extends ErrorException
 {
@@ -27,8 +27,8 @@ class ViewException extends ErrorException
     /**
      * Render the exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response|null
+     * @param  \BC\WP\Http\Request  $request
+     * @return \BC\WP\Http\Response|null
      */
     public function render($request)
     {

@@ -1,24 +1,24 @@
 <?php
 
-namespace Illuminate\View\Middleware;
+namespace BC\WP\View\Middleware;
 
 use Closure;
-use Illuminate\Contracts\View\Factory as ViewFactory;
-use Illuminate\Support\ViewErrorBag;
+use BC\WP\Contracts\View\Factory as ViewFactory;
+use BC\WP\Support\ViewErrorBag;
 
 class ShareErrorsFromSession
 {
     /**
      * The view factory implementation.
      *
-     * @var \Illuminate\Contracts\View\Factory
+     * @var \BC\WP\Contracts\View\Factory
      */
     protected $view;
 
     /**
      * Create a new error binder instance.
      *
-     * @param  \Illuminate\Contracts\View\Factory  $view
+     * @param  \BC\WP\Contracts\View\Factory  $view
      * @return void
      */
     public function __construct(ViewFactory $view)
@@ -29,7 +29,7 @@ class ShareErrorsFromSession
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \BC\WP\Http\Request  $request
      * @param  \Closure  $next
      * @return mixed
      */

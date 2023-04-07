@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\View\Engines;
+namespace BC\WP\View\Engines;
 
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\View\Compilers\CompilerInterface;
-use Illuminate\View\ViewException;
+use BC\WP\Filesystem\Filesystem;
+use BC\WP\View\Compilers\CompilerInterface;
+use BC\WP\View\ViewException;
 use Throwable;
 
 class CompilerEngine extends PhpEngine
@@ -12,7 +12,7 @@ class CompilerEngine extends PhpEngine
     /**
      * The Blade compiler instance.
      *
-     * @var \Illuminate\View\Compilers\CompilerInterface
+     * @var \BC\WP\View\Compilers\CompilerInterface
      */
     protected $compiler;
 
@@ -33,8 +33,8 @@ class CompilerEngine extends PhpEngine
     /**
      * Create a new compiler engine instance.
      *
-     * @param  \Illuminate\View\Compilers\CompilerInterface  $compiler
-     * @param  \Illuminate\Filesystem\Filesystem|null  $files
+     * @param  \BC\WP\View\Compilers\CompilerInterface  $compiler
+     * @param  \BC\WP\Filesystem\Filesystem|null  $files
      * @return void
      */
     public function __construct(CompilerInterface $compiler, Filesystem $files = null)
@@ -119,7 +119,7 @@ class CompilerEngine extends PhpEngine
     /**
      * Get the compiler implementation.
      *
-     * @return \Illuminate\View\Compilers\CompilerInterface
+     * @return \BC\WP\View\Compilers\CompilerInterface
      */
     public function getCompiler()
     {

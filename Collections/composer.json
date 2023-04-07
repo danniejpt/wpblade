@@ -1,0 +1,17 @@
+{
+    "name": "bc/collections",
+    "description": "The Collections package.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BC\\WP\\View\\Support\\": ""
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace BC\WP\View\Compilers\Concerns;
 
-use Illuminate\Support\Js;
+use BC\WP\Support\Js;
 
 trait CompilesJs
 {

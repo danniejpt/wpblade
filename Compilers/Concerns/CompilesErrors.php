@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace BC\WP\View\Compilers\Concerns;
 
 trait CompilesErrors
 {

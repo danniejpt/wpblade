@@ -1,19 +1,19 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
 use ArrayAccess;
 use BadMethodCallException;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\Support\MessageProvider;
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Contracts\View\Engine;
-use Illuminate\Contracts\View\View as ViewContract;
-use Illuminate\Support\MessageBag;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Support\ViewErrorBag;
+use BC\WP\View\Contracts\Support\Arrayable;
+use BC\WP\View\Contracts\Support\Htmlable;
+use BC\WP\View\Contracts\Support\MessageProvider;
+use BC\WP\View\Contracts\Support\Renderable;
+use BC\WP\Contracts\View\Engine;
+use BC\WP\Contracts\View\View as ViewContract;
+use BC\WP\Support\MessageBag;
+use BC\WP\Support\Str;
+use BC\WP\Support\Traits\Macroable;
+use BC\WP\Support\ViewErrorBag;
 use Throwable;
 
 class View implements ArrayAccess, Htmlable, ViewContract
@@ -25,14 +25,14 @@ class View implements ArrayAccess, Htmlable, ViewContract
     /**
      * The view factory instance.
      *
-     * @var \Illuminate\View\Factory
+     * @var \BC\WP\View\Factory
      */
     protected $factory;
 
     /**
      * The engine implementation.
      *
-     * @var \Illuminate\Contracts\View\Engine
+     * @var \BC\WP\Contracts\View\Engine
      */
     protected $engine;
 
@@ -60,8 +60,8 @@ class View implements ArrayAccess, Htmlable, ViewContract
     /**
      * Create a new view instance.
      *
-     * @param  \Illuminate\View\Factory  $factory
-     * @param  \Illuminate\Contracts\View\Engine  $engine
+     * @param  \BC\WP\View\Factory  $factory
+     * @param  \BC\WP\Contracts\View\Engine  $engine
      * @param  string  $view
      * @param  string  $path
      * @param  mixed  $data
@@ -261,7 +261,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
     /**
      * Add validation errors to the view.
      *
-     * @param  \Illuminate\Contracts\Support\MessageProvider|array  $provider
+     * @param  \BC\WP\View\Contracts\Support\MessageProvider|array  $provider
      * @param  string  $bag
      * @return $this
      */
@@ -275,8 +275,8 @@ class View implements ArrayAccess, Htmlable, ViewContract
     /**
      * Parse the given errors into an appropriate value.
      *
-     * @param  \Illuminate\Contracts\Support\MessageProvider|array|string  $provider
-     * @return \Illuminate\Support\MessageBag
+     * @param  \BC\WP\View\Contracts\Support\MessageProvider|array|string  $provider
+     * @return \BC\WP\Support\MessageBag
      */
     protected function formatErrors($provider)
     {
@@ -339,7 +339,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
     /**
      * Get the view factory instance.
      *
-     * @return \Illuminate\View\Factory
+     * @return \BC\WP\View\Factory
      */
     public function getFactory()
     {
@@ -349,7 +349,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
     /**
      * Get the view's rendering engine.
      *
-     * @return \Illuminate\Contracts\View\Engine
+     * @return \BC\WP\Contracts\View\Engine
      */
     public function getEngine()
     {
@@ -451,7 +451,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
      *
      * @param  string  $method
      * @param  array  $parameters
-     * @return \Illuminate\View\View
+     * @return \BC\WP\View\View
      *
      * @throws \BadMethodCallException
      */

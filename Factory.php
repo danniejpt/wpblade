@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\View\Factory as FactoryContract;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\View\Engines\EngineResolver;
+use BC\WP\Contracts\Container\Container;
+use BC\WP\Contracts\Events\Dispatcher;
+use BC\WP\View\Contracts\Support\Arrayable;
+use BC\WP\Contracts\View\Factory as FactoryContract;
+use BC\WP\Support\Arr;
+use BC\WP\Support\Traits\Macroable;
+use BC\WP\View\Engines\EngineResolver;
 use InvalidArgumentException;
 
 class Factory implements FactoryContract
@@ -25,28 +25,28 @@ class Factory implements FactoryContract
     /**
      * The engine implementation.
      *
-     * @var \Illuminate\View\Engines\EngineResolver
+     * @var \BC\WP\View\Engines\EngineResolver
      */
     protected $engines;
 
     /**
      * The view finder implementation.
      *
-     * @var \Illuminate\View\ViewFinderInterface
+     * @var \BC\WP\View\ViewFinderInterface
      */
     protected $finder;
 
     /**
      * The event dispatcher instance.
      *
-     * @var \Illuminate\Contracts\Events\Dispatcher
+     * @var \BC\WP\Contracts\Events\Dispatcher
      */
     protected $events;
 
     /**
      * The IoC container instance.
      *
-     * @var \Illuminate\Contracts\Container\Container
+     * @var \BC\WP\Contracts\Container\Container
      */
     protected $container;
 
@@ -93,9 +93,9 @@ class Factory implements FactoryContract
     /**
      * Create a new view factory instance.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $engines
-     * @param  \Illuminate\View\ViewFinderInterface  $finder
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+     * @param  \BC\WP\View\Engines\EngineResolver  $engines
+     * @param  \BC\WP\View\ViewFinderInterface  $finder
+     * @param  \BC\WP\Contracts\Events\Dispatcher  $events
      * @return void
      */
     public function __construct(EngineResolver $engines, ViewFinderInterface $finder, Dispatcher $events)
@@ -111,9 +111,9 @@ class Factory implements FactoryContract
      * Get the evaluated view contents for the given view.
      *
      * @param  string  $path
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
+     * @param  \BC\WP\View\Contracts\Support\Arrayable|array  $data
      * @param  array  $mergeData
-     * @return \Illuminate\Contracts\View\View
+     * @return \BC\WP\Contracts\View\View
      */
     public function file($path, $data = [], $mergeData = [])
     {
@@ -128,9 +128,9 @@ class Factory implements FactoryContract
      * Get the evaluated view contents for the given view.
      *
      * @param  string  $view
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
+     * @param  \BC\WP\View\Contracts\Support\Arrayable|array  $data
      * @param  array  $mergeData
-     * @return \Illuminate\Contracts\View\View
+     * @return \BC\WP\Contracts\View\View
      */
     public function make($view, $data = [], $mergeData = [])
     {
@@ -152,9 +152,9 @@ class Factory implements FactoryContract
      * Get the first view that actually exists from the given list.
      *
      * @param  array  $views
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
+     * @param  \BC\WP\View\Contracts\Support\Arrayable|array  $data
      * @param  array  $mergeData
-     * @return \Illuminate\Contracts\View\View
+     * @return \BC\WP\Contracts\View\View
      *
      * @throws \InvalidArgumentException
      */
@@ -176,7 +176,7 @@ class Factory implements FactoryContract
      *
      * @param  bool  $condition
      * @param  string  $view
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
+     * @param  \BC\WP\View\Contracts\Support\Arrayable|array  $data
      * @param  array  $mergeData
      * @return string
      */
@@ -194,7 +194,7 @@ class Factory implements FactoryContract
      *
      * @param  bool  $condition
      * @param  string  $view
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
+     * @param  \BC\WP\View\Contracts\Support\Arrayable|array  $data
      * @param  array  $mergeData
      * @return string
      */
@@ -266,8 +266,8 @@ class Factory implements FactoryContract
      *
      * @param  string  $view
      * @param  string  $path
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
-     * @return \Illuminate\Contracts\View\View
+     * @param  \BC\WP\View\Contracts\Support\Arrayable|array  $data
+     * @return \BC\WP\Contracts\View\View
      */
     protected function viewInstance($view, $path, $data)
     {
@@ -295,7 +295,7 @@ class Factory implements FactoryContract
      * Get the appropriate view engine for the given path.
      *
      * @param  string  $path
-     * @return \Illuminate\Contracts\View\Engine
+     * @return \BC\WP\Contracts\View\Engine
      *
      * @throws \InvalidArgumentException
      */
@@ -510,7 +510,7 @@ class Factory implements FactoryContract
     /**
      * Get the engine resolver instance.
      *
-     * @return \Illuminate\View\Engines\EngineResolver
+     * @return \BC\WP\View\Engines\EngineResolver
      */
     public function getEngineResolver()
     {
@@ -520,7 +520,7 @@ class Factory implements FactoryContract
     /**
      * Get the view finder instance.
      *
-     * @return \Illuminate\View\ViewFinderInterface
+     * @return \BC\WP\View\ViewFinderInterface
      */
     public function getFinder()
     {
@@ -530,7 +530,7 @@ class Factory implements FactoryContract
     /**
      * Set the view finder instance.
      *
-     * @param  \Illuminate\View\ViewFinderInterface  $finder
+     * @param  \BC\WP\View\ViewFinderInterface  $finder
      * @return void
      */
     public function setFinder(ViewFinderInterface $finder)
@@ -551,7 +551,7 @@ class Factory implements FactoryContract
     /**
      * Get the event dispatcher instance.
      *
-     * @return \Illuminate\Contracts\Events\Dispatcher
+     * @return \BC\WP\Contracts\Events\Dispatcher
      */
     public function getDispatcher()
     {
@@ -561,7 +561,7 @@ class Factory implements FactoryContract
     /**
      * Set the event dispatcher instance.
      *
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+     * @param  \BC\WP\Contracts\Events\Dispatcher  $events
      * @return void
      */
     public function setDispatcher(Dispatcher $events)
@@ -572,7 +572,7 @@ class Factory implements FactoryContract
     /**
      * Get the IoC container instance.
      *
-     * @return \Illuminate\Contracts\Container\Container
+     * @return \BC\WP\Contracts\Container\Container
      */
     public function getContainer()
     {
@@ -582,7 +582,7 @@ class Factory implements FactoryContract
     /**
      * Set the IoC container instance.
      *
-     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @param  \BC\WP\Contracts\Container\Container  $container
      * @return void
      */
     public function setContainer(Container $container)

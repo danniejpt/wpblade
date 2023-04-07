@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
-use Illuminate\Container\Container;
-use Illuminate\Support\Str;
-use Illuminate\View\Compilers\ComponentTagCompiler;
+use BC\WP\Container\Container;
+use BC\WP\Support\Str;
+use BC\WP\View\Compilers\ComponentTagCompiler;
 
 class DynamicComponent extends Component
 {
@@ -18,7 +18,7 @@ class DynamicComponent extends Component
     /**
      * The component tag compiler instance.
      *
-     * @var \Illuminate\View\Compilers\BladeTagCompiler
+     * @var \BC\WP\View\Compilers\BladeTagCompiler
      */
     protected static $compiler;
 
@@ -43,12 +43,12 @@ class DynamicComponent extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|string
+     * @return \BC\WP\Contracts\View\View|string
      */
     public function render()
     {
         $template = <<<'EOF'
-<?php extract(collect($attributes->getAttributes())->mapWithKeys(function ($value, $key) { return [Illuminate\Support\Str::camel(str_replace([':', '.'], ' ', $key)) => $value]; })->all(), EXTR_SKIP); ?>
+<?php extract(collect($attributes->getAttributes())->mapWithKeys(function ($value, $key) { return [BC\WP\Support\Str::camel(str_replace([':', '.'], ' ', $key)) => $value]; })->all(), EXTR_SKIP); ?>
 {{ props }}
 <x-{{ component }} {{ bindings }} {{ attributes }}>
 {{ slots }}
@@ -155,7 +155,7 @@ EOF;
     /**
      * Get an instance of the Blade tag compiler.
      *
-     * @return \Illuminate\View\Compilers\ComponentTagCompiler
+     * @return \BC\WP\View\Compilers\ComponentTagCompiler
      */
     protected function compiler()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace BC\WP\View\Compilers\Concerns;
 
 trait CompilesClasses
 {
@@ -14,6 +14,6 @@ trait CompilesClasses
     {
         $expression = is_null($expression) ? '([])' : $expression;
 
-        return "class=\"<?php echo \Illuminate\Support\Arr::toCssClasses{$expression} ?>\"";
+        return "class=\"<?php echo \BC\WP\Support\Arr::toCssClasses{$expression} ?>\"";
     }
 }

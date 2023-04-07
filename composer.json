@@ -1,5 +1,5 @@
 {
-    "name": "bc/wp/blade",
+    "name": "bc/wp",
     "description": "The View package.",
     "license": "MIT",
     "require": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Engines;
+namespace BC\WP\View\Engines;
 
 use Closure;
 use InvalidArgumentException;
@@ -41,7 +41,7 @@ class EngineResolver
      * Resolve an engine instance by name.
      *
      * @param  string  $engine
-     * @return \Illuminate\Contracts\View\Engine
+     * @return \BC\WP\Contracts\View\Engine
      *
      * @throws \InvalidArgumentException
      */

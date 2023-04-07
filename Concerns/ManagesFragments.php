@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace BC\WP\View\Concerns;
 
 use InvalidArgumentException;
 

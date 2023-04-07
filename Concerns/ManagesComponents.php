@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace BC\WP\View\Concerns;
 
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Arr;
-use Illuminate\Support\HtmlString;
-use Illuminate\View\ComponentSlot;
+use BC\WP\View\Contracts\Support\Htmlable;
+use BC\WP\Contracts\View\View;
+use BC\WP\Support\Arr;
+use BC\WP\Support\HtmlString;
+use BC\WP\View\ComponentSlot;
 
 trait ManagesComponents
 {
@@ -48,7 +48,7 @@ trait ManagesComponents
     /**
      * Start a component rendering process.
      *
-     * @param  \Illuminate\Contracts\View\View|\Illuminate\Contracts\Support\Htmlable|\Closure|string  $view
+     * @param  \BC\WP\Contracts\View\View|\BC\WP\View\Contracts\Support\Htmlable|\Closure|string  $view
      * @param  array  $data
      * @return void
      */

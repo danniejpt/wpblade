@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace BC\WP\View\Compilers\Concerns;
 
-use Illuminate\Foundation\Vite;
+use BC\WP\Foundation\Vite;
 
 trait CompilesHelpers
 {

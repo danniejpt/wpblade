@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace BC\WP\View\Concerns;
 
-use Illuminate\Support\Arr;
-use Illuminate\Support\LazyCollection;
+use BC\WP\Support\Arr;
+use BC\WP\Support\LazyCollection;
 
 trait ManagesLoops
 {

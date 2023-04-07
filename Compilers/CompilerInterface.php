@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Compilers;
+namespace BC\WP\View\Compilers;
 
 interface CompilerInterface
 {

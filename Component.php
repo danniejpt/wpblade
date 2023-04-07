@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
 use Closure;
-use Illuminate\Container\Container;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\View\View as ViewContract;
+use BC\WP\Container\Container;
+use BC\WP\View\Contracts\Support\Htmlable;
+use BC\WP\Contracts\View\View as ViewContract;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
@@ -29,14 +29,14 @@ abstract class Component
     /**
      * The component attributes.
      *
-     * @var \Illuminate\View\ComponentAttributeBag
+     * @var \BC\WP\View\ComponentAttributeBag
      */
     public $attributes;
 
     /**
      * The view factory instance, if any.
      *
-     * @var \Illuminate\Contracts\View\Factory|null
+     * @var \BC\WP\Contracts\View\Factory|null
      */
     protected static $factory;
 
@@ -78,7 +78,7 @@ abstract class Component
     /**
      * Get the view / view contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\Support\Htmlable|\Closure|string
+     * @return \BC\WP\Contracts\View\View|\BC\WP\View\Contracts\Support\Htmlable|\Closure|string
      */
     abstract public function render();
 
@@ -128,7 +128,7 @@ abstract class Component
     /**
      * Resolve the Blade view or view file that should be used when rendering the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\Support\Htmlable|\Closure|string
+     * @return \BC\WP\Contracts\View\View|\BC\WP\View\Contracts\Support\Htmlable|\Closure|string
      */
     public function resolveView()
     {
@@ -176,7 +176,7 @@ abstract class Component
     /**
      * Create a Blade view with the raw component string content.
      *
-     * @param  \Illuminate\Contracts\View\Factory  $factory
+     * @param  \BC\WP\Contracts\View\Factory  $factory
      * @param  string  $contents
      * @return string
      */
@@ -293,7 +293,7 @@ abstract class Component
      * Create an invokable, toStringable variable for the given component method.
      *
      * @param  string  $method
-     * @return \Illuminate\View\InvokableComponentVariable
+     * @return \BC\WP\View\InvokableComponentVariable
      */
     protected function createInvokableVariable(string $method)
     {
@@ -364,7 +364,7 @@ abstract class Component
      * Get a new attribute bag instance.
      *
      * @param  array  $attributes
-     * @return \Illuminate\View\ComponentAttributeBag
+     * @return \BC\WP\View\ComponentAttributeBag
      */
     protected function newAttributeBag(array $attributes = [])
     {
@@ -385,9 +385,9 @@ abstract class Component
      * Get the evaluated view contents for the given view.
      *
      * @param  string|null  $view
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
+     * @param  \BC\WP\View\Contracts\Support\Arrayable|array  $data
      * @param  array  $mergeData
-     * @return \Illuminate\Contracts\View\View
+     * @return \BC\WP\Contracts\View\View
      */
     public function view($view, $data = [], $mergeData = [])
     {
@@ -397,7 +397,7 @@ abstract class Component
     /**
      * Get the view factory instance.
      *
-     * @return \Illuminate\Contracts\View\Factory
+     * @return \BC\WP\Contracts\View\Factory
      */
     protected function factory()
     {

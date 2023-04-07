@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
 interface ViewFinderInterface
 {

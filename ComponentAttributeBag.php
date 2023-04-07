@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\View;
+namespace BC\WP\View;
 
 use ArrayAccess;
 use ArrayIterator;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Support\Arr;
-use Illuminate\Support\HtmlString;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\Conditionable;
-use Illuminate\Support\Traits\Macroable;
+use BC\WP\View\Contracts\Support\Htmlable;
+use BC\WP\Support\Arr;
+use BC\WP\Support\HtmlString;
+use BC\WP\Support\Str;
+use BC\WP\Support\Traits\Conditionable;
+use BC\WP\Support\Traits\Macroable;
 use IteratorAggregate;
 use Traversable;
 
@@ -294,7 +294,7 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
      * Create a new appendable attribute value.
      *
      * @param  mixed  $value
-     * @return \Illuminate\View\AppendableAttributeValue
+     * @return \BC\WP\View\AppendableAttributeValue
      */
     public function prepends($value)
     {
@@ -362,7 +362,7 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, IteratorAggregate
      * Merge additional attributes / values into the attribute bag.
      *
      * @param  array  $attributeDefaults
-     * @return \Illuminate\Support\HtmlString
+     * @return \BC\WP\Support\HtmlString
      */
     public function __invoke(array $attributeDefaults = [])
     {

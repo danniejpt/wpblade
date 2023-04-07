@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Engines;
+namespace BC\WP\View\Engines;
 
 abstract class Engine
 {
